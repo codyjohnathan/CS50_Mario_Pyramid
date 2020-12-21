@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cs50.h>
+// #include <cs50.h>
 
 int main(void)
 {
@@ -9,8 +9,8 @@ int main(void)
 //-----getting our user input: It must be within the range 1 - 8 ----------------//
     do
     {
-        n = get_int("Height: "); // This line relies on cs50.h, so will have to be revisted
-
+        printf("Height:"); // This line relies on cs50.h, so will have to be revisted
+        scanf("%d", &n);
     }
     while (n < 1 || n > 8);
 
