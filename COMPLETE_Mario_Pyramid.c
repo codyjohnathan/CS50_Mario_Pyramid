@@ -1,5 +1,5 @@
 #include <stdio.h>
-// #include <cs50.h>
+#include <string.h>
 
 int main(void)
 {
@@ -9,8 +9,12 @@ int main(void)
 //-----getting our user input: It must be within the range 1 - 8 ----------------//
     do
     {
-        printf("Height:"); // This line relies on cs50.h, so will have to be revisted
-        scanf("%d", &n);
+        printf("Height:");
+        if (!scanf("%d", &n))
+        {
+            scanf("%*[^\n]"); //discard that line up to the newline
+            printf("Could not read an integer value!\n");
+        }
     }
     while (n < 1 || n > 8);
 
